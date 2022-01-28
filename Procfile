@@ -1,5 +1,4 @@
-web: gunicorn crm1.wsgi --log-file -
-manage:app
+web: gunicorn app:app
 heroku ps:scale web=1
 
 
