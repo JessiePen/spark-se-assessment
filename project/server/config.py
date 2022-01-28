@@ -1,4 +1,5 @@
 import os
+from pickle import FALSE
 basedir = os.path.abspath(os.path.dirname(__file__))
 postgres_local_base = 'sqlite:///'
 database_name = 'diagnostic'
@@ -12,13 +13,15 @@ class BaseConfig:
 
 class DevelopmentConfig(BaseConfig):
     """Development configuration."""
-    DEBUG = True
+    DEBUG = False
     BCRYPT_LOG_ROUNDS = 4
     SQLALCHEMY_DATABASE_URI = postgres_local_base + database_name
+    ALLOWED_HOSTS = ['pengyh-spark519-assessment.herokuapp.com', '127.0.0.1']
+
 
 class TestingConfig(BaseConfig):
     """Testing configuration."""
-    DEBUG = True
+    DEBUG = False
     TESTING = True
     BCRYPT_LOG_ROUNDS = 4
     SQLALCHEMY_DATABASE_URI = postgres_local_base + database_name + '_test.db'
