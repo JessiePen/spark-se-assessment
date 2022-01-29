@@ -1,2 +1,2 @@
-web: gunicorn __init__:app
+web: gunicorn project.server:app
 heroku ps:scale web=1
