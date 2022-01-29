@@ -1,2 +1,2 @@
-web: gunicorn --bind 0.0.0.0:$PORT flaskapp:project.server
+web: gunicorn manage:app
 heroku ps:scale web=1
