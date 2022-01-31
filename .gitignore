@@ -12,7 +12,7 @@ __pycache__
 env.sh
 migrations
 
-# Add SQLITE DB
-diagnostic
-diagnostic_test
-diagnostic_test.db
+# # Add SQLITE DB
+# diagnostic
+# diagnostic_test
+# diagnostic_test.db

@@ -16,7 +16,14 @@ class DevelopmentConfig(BaseConfig):
     DEBUG = False
     BCRYPT_LOG_ROUNDS = 4
     SQLALCHEMY_DATABASE_URI = postgres_local_base + database_name
+    # print(11111111111111111111111)
+    # print(SQLALCHEMY_DATABASE_URI)
     ALLOWED_HOSTS = ['pengyh-spark519-assessment.herokuapp.com', '127.0.0.1']
+
+    # db_dir = "../../database/db.sqlite"
+    # print(f'os.path.abspath(db_dir): {str(os.path.abspath(db_dir))}')
+    # SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.abspath(db_dir)  # works
+    # SQLALCHEMY_DATABASE_URI = "sqlite:///" + db_dir  # fails
 
 
 class TestingConfig(BaseConfig):
